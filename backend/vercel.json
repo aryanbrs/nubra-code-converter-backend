@@ -1,7 +1,8 @@
 {
   "rewrites": [
     { "source": "/convert", "destination": "/api/convert" },
-    { "source": "/health", "destination": "/api/health" }
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/chat", "destination": "/api/chat" }
   ]
 }
 
