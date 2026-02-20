@@ -1,9 +1,4 @@
-const {
-  validateChatRequest,
-  detectPromptInjectionIndicators,
-  buildChatUserMessage,
-} = require("../src/convertCore");
-const { chatbaseConvert } = require("../src/chatbaseClient");
+const { sharedChatController } = require("../src/chat/chatController");
 
 const MAX_BODY_BYTES = 256 * 1024;
 
@@ -126,37 +121,13 @@ module.exports = async (req, res) => {
     );
   }
 
-  const errors = validateChatRequest(body);
-  if (errors.length > 0) {
-    res.statusCode = 400;
-    res.setHeader("Content-Type", "application/json");
-    return res.end(
-      JSON.stringify({
-        errorCode: "VALIDATION_ERROR",
-        message: errors.join(" "),
-      })
-    );
-  }
-
-  const { prompt } = body;
-  if (detectPromptInjectionIndicators(prompt)) {
-    res.statusCode = 400;
-    res.setHeader("Content-Type", "application/json");
-    return res.end(
-      JSON.stringify({
-        errorCode: "UNSAFE_INPUT",
-        message:
-          "Input appears to contain prompt-injection style instructions. Please remove such content and try again.",
-      })
-    );
-  }
-
   try {
-    const result = await chatbaseConvert({ userMessage: buildChatUserMessage(prompt) });
-    res.statusCode = 200;
+    const result = await sharedChatController.handle(body);
+    res.statusCode = result.statusCode;
     res.setHeader("Content-Type", "application/json");
-    return res.end(JSON.stringify({ answer: result.text }));
+    return res.end(JSON.stringify(result.body));
   } catch (e) {
+    // Never leak provider details/config to callers.
     res.statusCode = 500;
     res.setHeader("Content-Type", "application/json");
     return res.end(

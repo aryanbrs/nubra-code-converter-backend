@@ -1212,17 +1212,18 @@ window.NubraAIAssistant = window.NubraAIAssistant || class NubraAIAssistant {
     try {
       const result = await chrome.storage.local.get(['nubraTheme']);
       const savedTheme = result.nubraTheme;
-      if (savedTheme === 'night') {
+      if (savedTheme === 'night' || savedTheme === 'glass') {
         this.currentTheme = savedTheme;
       } else {
-        this.currentTheme = 'night';
+        const fallbackTheme = window.localStorage.getItem('nubraTheme');
+        if (fallbackTheme === 'night' || fallbackTheme === 'glass') {
+          this.currentTheme = fallbackTheme;
+        }
       }
     } catch (error) {
       const fallbackTheme = window.localStorage.getItem('nubraTheme');
-      if (fallbackTheme === 'night') {
+      if (fallbackTheme === 'night' || fallbackTheme === 'glass') {
         this.currentTheme = fallbackTheme;
-      } else {
-        this.currentTheme = 'night';
       }
     }
     this.applyTheme();

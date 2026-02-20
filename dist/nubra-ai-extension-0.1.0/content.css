@@ -1041,174 +1041,19 @@ body.nubra-resizing * {
   scrollbar-color: rgba(170, 200, 228, 0.36) rgba(18, 31, 49, 0.38);
 }
 
-#nubra-sidebar:not(.nubra-theme-night) .nubra-code-block pre {
-  background: rgba(248, 250, 253, 0.96) !important;
-  color: #0f172a !important;
+#nubra-sidebar .nubra-code-block pre {
+  background: rgba(28, 32, 39, 0.88) !important;
+  color: #f1f7ff !important;
   border: 0 !important;
-  opacity: 1 !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-shadow: none !important;
 }
 
-#nubra-sidebar:not(.nubra-theme-night) .nubra-code-block code {
+#nubra-sidebar .nubra-code-block code {
   display: block;
   background: transparent !important;
-  color: #0f172a !important;
+  color: inherit !important;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
   font-size: 12px !important;
   line-height: 1.45 !important;
-  opacity: 1 !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-shadow: none !important;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-code-block pre *,
-#nubra-sidebar:not(.nubra-theme-night) .nubra-code-block code * {
-  color: #0f172a !important;
-  -webkit-text-fill-color: #0f172a !important;
-  opacity: 1 !important;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-assistant-message .nubra-message-content.type-converted_output pre,
-#nubra-sidebar:not(.nubra-theme-night) .nubra-assistant-message .nubra-message-content.type-converted_output code {
-  color: #0f172a !important;
-  -webkit-text-fill-color: #0f172a !important;
-  opacity: 1 !important;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-md-heading {
-  color: #475569;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-text code {
-  background: rgba(226, 234, 246, 0.88);
-  border: 1px solid rgba(166, 183, 207, 0.55);
-  color: #22324a;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-backend-status-chip.ready {
-  color: #166534;
-  background: rgba(34, 197, 94, 0.2);
-  border-color: rgba(34, 197, 94, 0.38);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-send-btn {
-  background: linear-gradient(135deg, rgba(82, 129, 179, 0.95) 0%, rgba(63, 104, 150, 0.95) 100%);
-  color: #f8fafc;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-send-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, rgba(96, 142, 191, 0.96) 0%, rgba(76, 118, 165, 0.96) 100%);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-send-btn:disabled {
-  background: linear-gradient(135deg, rgba(172, 187, 206, 0.95) 0%, rgba(152, 169, 191, 0.95) 100%);
-  color: rgba(248, 250, 252, 0.9);
-  opacity: 1;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-sessions-list {
-  color: #334155;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-sessions-list h3 {
-  color: #3c6c9c;
-  background: none;
-  -webkit-text-fill-color: currentColor;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-search-input {
-  border-color: rgba(148, 163, 184, 0.32);
-  background: rgba(236, 242, 250, 0.95);
-  color: #1f2937;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-search-input::placeholder {
-  color: #64748b;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-search-input:focus {
-  border-color: rgba(87, 132, 179, 0.5);
-  background: rgba(245, 249, 255, 0.98);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-empty {
-  color: #64748b;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-item {
-  background: linear-gradient(145deg, rgba(239, 245, 252, 0.96), rgba(232, 240, 250, 0.94));
-  border-color: rgba(148, 163, 184, 0.32);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-item:hover {
-  background: linear-gradient(145deg, rgba(245, 250, 255, 0.98), rgba(237, 245, 254, 0.96));
-  border-color: rgba(96, 143, 191, 0.45);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-item.active {
-  background: linear-gradient(145deg, rgba(224, 236, 251, 0.98), rgba(216, 230, 248, 0.96));
-  border-color: rgba(96, 143, 191, 0.5);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-info h4 {
-  color: #1e293b;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-session-info p {
-  color: #475569;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-pin-session-btn {
-  border-color: rgba(96, 143, 191, 0.36);
-  background: rgba(191, 216, 242, 0.55);
-  color: #33567a;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-pin-session-btn.pinned {
-  background: rgba(77, 129, 179, 0.24);
-  border-color: rgba(77, 129, 179, 0.46);
-  color: #1f3f64;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-rename-session-btn {
-  background: rgba(205, 219, 239, 0.72);
-  border-color: rgba(138, 162, 196, 0.44);
-  color: #314a69;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-rename-session-btn:hover {
-  background: rgba(196, 212, 234, 0.86);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-load-session-btn {
-  background: rgba(189, 209, 236, 0.78);
-  border-color: rgba(120, 154, 196, 0.45);
-  color: #24486f;
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-load-session-btn:hover {
-  background: rgba(177, 200, 230, 0.9);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-delete-session-btn {
-  background: rgba(254, 226, 226, 0.92);
-  color: #dc2626;
-  border-color: rgba(248, 113, 113, 0.45);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-delete-session-btn:hover {
-  background: rgba(254, 213, 213, 0.96);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-back-btn {
-  background: rgba(188, 207, 235, 0.78);
-  color: #23486f;
-  border-color: rgba(114, 149, 191, 0.46);
-}
-
-#nubra-sidebar:not(.nubra-theme-night) .nubra-back-btn:hover {
-  background: rgba(176, 197, 228, 0.9);
 }
 
 .nubra-code-hint {
@@ -1615,22 +1460,6 @@ body.nubra-resizing * {
   -webkit-text-fill-color: unset;
 }
 
-#nubra-sidebar.nubra-theme-night .nubra-welcome-message {
-  color: #cbd5e1;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-welcome-message p {
-  color: #b6c3d6;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-welcome-message li {
-  color: #c4d0e1;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-welcome-message strong {
-  color: #8ec5ff;
-}
-
 #nubra-sidebar.nubra-theme-night .nubra-brand-primary {
   color: #e5e7eb;
 }
@@ -1682,17 +1511,6 @@ body.nubra-resizing * {
 #nubra-sidebar.nubra-theme-night .nubra-user-message .nubra-message-content.type-user_code {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.06));
   border-color: rgba(255, 255, 255, 0.14);
-  color: #e5e7eb !important;
-  -webkit-text-fill-color: #e5e7eb !important;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-user-message .nubra-message-content pre,
-#nubra-sidebar.nubra-theme-night .nubra-user-message .nubra-message-content code,
-#nubra-sidebar.nubra-theme-night .nubra-user-message .nubra-message-content pre *,
-#nubra-sidebar.nubra-theme-night .nubra-user-message .nubra-message-content code * {
-  color: #e5e7eb !important;
-  -webkit-text-fill-color: #e5e7eb !important;
-  opacity: 1 !important;
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-assistant-message .nubra-message-content {
@@ -1720,32 +1538,8 @@ body.nubra-resizing * {
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-code-block pre {
-  background: linear-gradient(180deg, rgba(26, 30, 36, 0.58), rgba(18, 21, 26, 0.52)) !important;
-  color: #f3f4f6 !important;
-  opacity: 1 !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-shadow: none !important;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-code-block code {
-  color: #f3f4f6 !important;
-  opacity: 1 !important;
-  -webkit-text-fill-color: currentColor !important;
-  text-shadow: none !important;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-code-block pre *,
-#nubra-sidebar.nubra-theme-night .nubra-code-block code * {
-  color: #f3f4f6 !important;
-  -webkit-text-fill-color: #f3f4f6 !important;
-  opacity: 1 !important;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-assistant-message .nubra-message-content.type-converted_output pre,
-#nubra-sidebar.nubra-theme-night .nubra-assistant-message .nubra-message-content.type-converted_output code {
-  color: #f3f4f6 !important;
-  -webkit-text-fill-color: #f3f4f6 !important;
-  opacity: 1 !important;
+  background: linear-gradient(180deg, rgba(26, 30, 36, 0.58), rgba(18, 21, 26, 0.52));
+  color: #f3f4f6;
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-summary-block {
@@ -1776,17 +1570,6 @@ body.nubra-resizing * {
 #nubra-sidebar.nubra-theme-night .nubra-input-shell:focus-within {
   border-color: rgba(255, 255, 255, 0.26);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 12px 28px rgba(0, 0, 0, 0.38);
-}
-
-#nubra-sidebar.nubra-theme-night #nubra-code-input {
-  color: #e5e7eb !important;
-  -webkit-text-fill-color: #e5e7eb !important;
-  caret-color: #f8fafc;
-}
-
-#nubra-sidebar.nubra-theme-night #nubra-code-input::placeholder {
-  color: #94a3b8 !important;
-  -webkit-text-fill-color: #94a3b8 !important;
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-send-btn {
@@ -1820,29 +1603,6 @@ body.nubra-resizing * {
   color: #9ca3af;
 }
 
-#nubra-sidebar.nubra-theme-night .nubra-session-item {
-  background: linear-gradient(145deg, rgba(10, 16, 28, 0.88), rgba(7, 12, 22, 0.84));
-  border-color: rgba(86, 123, 172, 0.42);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-session-item:hover {
-  background: linear-gradient(145deg, rgba(14, 21, 35, 0.92), rgba(10, 16, 28, 0.88));
-  border-color: rgba(106, 149, 203, 0.5);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-session-item.active {
-  background: linear-gradient(145deg, rgba(18, 28, 45, 0.94), rgba(12, 21, 36, 0.9));
-  border-color: rgba(126, 172, 229, 0.56);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-session-info h4 {
-  color: #f3f4f6;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-session-info p {
-  color: #a8b4c7;
-}
-
 #nubra-sidebar.nubra-theme-night .nubra-session-rename-input {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.14);
@@ -1861,26 +1621,6 @@ body.nubra-resizing * {
 
 #nubra-sidebar.nubra-theme-night .nubra-rename-session-btn:hover {
   background: rgba(255, 255, 255, 0.16);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-load-session-btn {
-  background: rgba(54, 91, 150, 0.36);
-  border-color: rgba(111, 154, 214, 0.44);
-  color: #e5edf8;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-load-session-btn:hover {
-  background: rgba(69, 109, 171, 0.44);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-delete-session-btn {
-  background: rgba(127, 29, 29, 0.34);
-  border-color: rgba(248, 113, 113, 0.42);
-  color: #fca5a5;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-delete-session-btn:hover {
-  background: rgba(153, 27, 27, 0.42);
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-pin-session-btn {
@@ -1902,16 +1642,6 @@ body.nubra-resizing * {
 #nubra-sidebar.nubra-theme-night .nubra-rename-action-btn.cancel {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.18);
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-back-btn {
-  background: rgba(49, 75, 127, 0.42);
-  border-color: rgba(117, 152, 206, 0.5);
-  color: #e5edf8;
-}
-
-#nubra-sidebar.nubra-theme-night .nubra-back-btn:hover {
-  background: rgba(60, 88, 144, 0.5);
 }
 
 #nubra-sidebar.nubra-theme-night .nubra-backend-status-chip {

@@ -6,12 +6,11 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const {
   validateConvertRequest,
-  validateChatRequest,
   detectPromptInjectionIndicators,
   buildChatbaseUserMessage,
-  buildChatUserMessage,
 } = require("./convertCore");
 const { chatbaseConvert } = require("./chatbaseClient");
+const { sharedChatController } = require("./chat/chatController");
 
 const app = express();
 
@@ -117,26 +116,9 @@ app.post("/convert", async (req, res) => {
 
 // POST /chat
 app.post("/chat", async (req, res) => {
-  const errors = validateChatRequest(req.body);
-  if (errors.length > 0) {
-    return res.status(400).json({
-      errorCode: "VALIDATION_ERROR",
-      message: errors.join(" "),
-    });
-  }
-
-  const { prompt } = req.body;
-  if (detectPromptInjectionIndicators(prompt)) {
-    return res.status(400).json({
-      errorCode: "UNSAFE_INPUT",
-      message:
-        "Input appears to contain prompt-injection style instructions. Please remove such content and try again.",
-    });
-  }
-
   try {
-    const result = await chatbaseConvert({ userMessage: buildChatUserMessage(prompt) });
-    return res.json({ answer: result.text });
+    const result = await sharedChatController.handle(req.body);
+    return res.status(result.statusCode).json(result.body);
   } catch (e) {
     return res.status(500).json({
       errorCode: "CHAT_FAILED",
